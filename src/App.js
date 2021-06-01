@@ -8,6 +8,7 @@ import ResetPassword from "./components/ResetPassword.js";
 import PrivateRoute from "./components/PrivateRoute.js";
 import UpdateProfile from "./components/UpdateProfile.js";
 import NotFound from "./components/NotFound.js";
+import LoginAnonymously from "./components/LoginAnonymously.js";
 
 function App() {
 	return (
@@ -21,6 +22,7 @@ function App() {
 							<Route path="/reset-password" component={ResetPassword} />
 							<Route path="/signup" component={Signup} />
 							<Route path="/login" component={Login} />
+							<Route path="/login-anonymously" component={LoginAnonymously} />
 							<Route path="/not-found" component={NotFound} />
 							<Redirect to="/not-found" />
 						</Switch>
