@@ -4,7 +4,6 @@ import moment from "moment";
 import StartedButton from "./StartedButton.js";
 import Title from "./Title.js";
 import useRecords, { RECORD_TYPES } from "../hooks/useRecords.js";
-import AnotherWatch from "./AnotherWatch.js";
 import { useRecordContext } from "../contexts/RecordContext.js";
 
 const { RESET_RECORD, ADD_RECORD, DELETE_RECORD } = RECORD_TYPES;
@@ -16,7 +15,7 @@ function formattedTime(milliSecs) {
 	return "";
 }
 
-function StopWatch(props) {
+function StopWatchFunction(props) {
 	const [milliSeconds, setMilliSeconds] = useState(0);
 	const time = formattedTime(milliSeconds);
 	const isTimeZero = milliSeconds === 0;
@@ -116,9 +115,8 @@ function StopWatch(props) {
 					</ListGroup>
 				</Card.Body>
 			</Card>
-			{/*<AnotherWatch />*/}
 		</>
 	);
 }
 
-export default StopWatch;
+export default StopWatchFunction;

@@ -45,7 +45,6 @@ class StopWatchClass extends Component {
 				clearInterval(timer);
 			}
 		}
-		this.recordsListRef.current.scrollTop = this.recordsListRef.current?.scrollHeight ?? 0;
 	}
 
 	componentWillUnmount() {
@@ -84,6 +83,9 @@ class StopWatchClass extends Component {
 				},
 			],
 		});
+		process.nextTick(() => {
+			this.recordsListRef.current.scrollTop = this.recordsListRef.current?.scrollHeight ?? 0;
+		})
 	}
 
 	render() {
