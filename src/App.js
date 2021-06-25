@@ -11,6 +11,7 @@ import NotFound from "./components/NotFound.js";
 import LoginAnonymously from "./components/LoginAnonymously.js";
 import StopWatchContainer from "./components/StopWatchContainer.js";
 import RecordProvider from "./contexts/RecordContext.js";
+import ScoreBoard from "./components/ScoreBoard.js";
 
 function App() {
 	return (
@@ -26,6 +27,7 @@ function App() {
 							<Route path="/login" component={Login} />
 							<Route path="/login-anonymously" component={LoginAnonymously} />
 							<Route path="/stop-watch" component={StopWatchContainer} />
+							<Route path="/score-board" component={ScoreBoard} />
 							<Route path="/not-found" component={NotFound} />
 							<Redirect to="/not-found" />
 						</Switch>
